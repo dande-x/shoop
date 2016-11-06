@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<title>shoop</title>
+		<meta charset="UTF-8"/>
+		<link type="text/css" rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href='css/chat.css'/>
+		<script src="js/func.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/shoop.js" type="text/javascript" charset="utf-8"></script>
+<script>
+	//setCookie("email","921321@qq.com",1);
+	//setCookie("userName","hh",1);
+	init();
+	window.onload=initUser(); 
+	var interval=setInterval(showHint,1000);
+</script>
+</head>
+
+<body>
+<!-- <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'> -->
+
+<div class="container clearfix">
+    <div class="people-list" id="people-list" >
+        <div class="search">
+            <button  class=" searchbutton  " onclick="getFriend()" value="查找好友">search</button>
+            <i class="fa fa-search"></i>
+        </div>
+        <ul id="friends" class="list">
+        	
+        	<!--以下是好友列表-->
+           <!--
+           	作者：972794467@qq.com
+           	时间：2016-11-03
+           	描述：
+           
+           
+           <li id="friendId_3" class="clearfix choose friend hint" onclick="showMessage(this)">
+                <img class="avatar" src="images/userhead.jpg" alt="avatar"/>
+                <div class="about">
+                    <div class="name">Jerry</div>
+                    <div class="status">
+                        <i class="fa fa-circle online"></i>online
+                    </div>
+                </div>
+            </li>
+
+            <li id="friendId_2" class="clearfix friend " onclick="showMessage(this)">
+                <img class="avatar" src="images/userhead.jpg" alt="avatar" />
+                <div class="about">
+                    <div class="name">Marry</div>
+                    <div class="status">
+                        <i class="fa fa-circle offline"></i>online
+                    </div>
+                </div>
+            </li>
+-->
+            
+        </ul>
+        
+    </div>
+
+    <div class="chat">
+        <div class="chat-header clearfix">
+        	<!--
+            	下面是正在聊天的好友信息
+            -->
+            <img id="userAvatar" class="avatar" src="images/userhead.jpg" alt="avatar" />
+
+            <div class="chat-about">
+                <div id="userName" class="chat-with">Tom</div>
+                
+            </div>
+            <i class="fa fa-star"></i>
+        </div>
+        <!-- end chat-header -->
+
+        <div class="chat-history " id="messagesDiv">
+            <ul id="messages">
+            	<!--
+                	下面是聊天信息
+                -->
+               
+                <!--	
+                <li  class="clearfix friendId_2">
+                    <div class="message-data align-right">
+                        <span class="message-data-time">10:10 AM, Today</span>
+                        <span class="message-data-name">Olia</span> 
+                        <i class="fa fa-circle me"></i>
+                    </div>
+                    <div class="message other-message float-right">
+                        Hi Vincent, how are you? How is the project coming along?
+                    </div>
+                </li>
+
+                <li class=" friendId_2 ">
+                    <div class="message-data">
+                        <span class="message-data-name">Vincent</span>
+                        <span class="message-data-time">10:12 AM, Today</span>
+                    </div>
+                    <div class="message my-message">
+                        Are we meeting today? Project has been already finished and I have results to show you.
+                    </div>
+                </li>
+				
+                -->
+
+            </ul>
+
+        </div>
+        <!-- end chat-history -->
+
+        <div class="chat-message clearfix">
+        <textarea onkeyup="keyEvent()" name="message-to-send" id="message-to-send" placeholder="Type your message" rows="3"></textarea>
+        <button id="sendButton"  onclick="sendMessage()">发送</button>
+</body>
+</html>
