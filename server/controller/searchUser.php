@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: 97279
- * Date: 2016/11/5
- * Time: 22:26
+ * Date: 2016/11/6
+ * Time: 23:49
  */
 require ('../init.inc.php');
 
@@ -13,9 +13,12 @@ if(!$JSON){
 }
 $jsonArray=json_decode($JSON,true);
 $email=$jsonArray['email'];
-$sql='select id,name,avatar from users where email="'.$email.'";';
+$sql='select id,name from users where email="'.$email.'";';
 $dbLink=connectMysqli();
 $result=$dbLink->query($sql);
 $row=$result->fetch_assoc();
-$row['avatar']=IMGPATH.$row['avatar'];
-exit(json_encode($row));
+if($row==null){
+    exitSend(USER_NOT_EXIST);
+}else{
+    exit(json_encode($row));
+}

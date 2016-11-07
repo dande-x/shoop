@@ -15,12 +15,14 @@ define ('DATABASE_DBNAME','shoop');
 //图片路径
 define ('IMGPATH','http://127.0.0.1/shoop/server/img/');
 
-define('SUCCESS',1000);
+define('LOGIN_SUCCESS',1000);
 define('USER_NOT_EXIST',1001);
 define('PASSWORD_WRONG',1002);
 define('USER_EXIST',1003);
 define('REGISTER_SUCCESS',1004);
 define('VERIFY_CODE_WRONG',1005);
-//define('','');
+
+define('REQUEST_ADD_FRIEND_SUCCESS',1006);
+define('ADD_FRIEND_SUCCESS',1007);
 define('DB_INSERT_ERROR',1020);
 define('ACCEPT_JSON_ERROR',1021);

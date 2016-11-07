@@ -26,6 +26,7 @@ if($code!=$_SESSION['regCode']){
 		//echo "alert('验证码错误');window.location.href='$url'";  跳转，刷新验证码，无法保留数据。		
 	echo 'window.onload=function(){alert("验证码错误！");history.go(-1);}; ';//无法刷新验证码
 	echo '</script>';
+    exit;
 }
 $sql='insert into users(email,password) values("'.$email.'","'.$password.'");';
 $dbLink=connectMysqli();
@@ -36,6 +37,6 @@ if(!$result=$dbLink->query($sql)){
 	echo '</script>';
 }else{
     echo "<script language='javascript' type='text/javascript'> ";
-	echo "alert('注册成功');window.location.href='../../login.html'";  //跳转，刷新验证码，无法保留数据。		
+	echo "alert('注册成功');window.location.href='../../login.html'";  //跳转，刷新验证码，无法保留数据。
 	echo '</script>';
 }

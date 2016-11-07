@@ -18,8 +18,11 @@ $sql='select * from users where email="'.$email.'";';
 $dbLink=connectMysqli();
 $result=$dbLink->query($sql);
 $row=$result->fetch_assoc();
+if($row==null){
+    exitSend(USER_NOT_EXIST);
+}
 if($password!=$row['password']){
     exitSend(PASSWORD_WRONG);
 }
-exitSend(SUCCESS);
+exitSend(LOGIN_SUCCESS);
 

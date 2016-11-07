@@ -6,13 +6,15 @@
 		<link type="text/css" rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" type="text/css" href='css/chat.css'/>
 		<script src="js/func.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/shoop.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/message.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/friend.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/prompt.js" type="text/javascript" charset="utf-8"></script>
 <script>
 	//setCookie("email","921321@qq.com",1);
 	//setCookie("userName","hh",1);
 	init();
 	window.onload=initUser(); 
-	var interval=setInterval(showHint,1000);
+	var interval=setInterval(showHint,5000);
 </script>
 </head>
 
@@ -43,17 +45,17 @@
                     </div>
                 </div>
             </li>
-
-            <li id="friendId_2" class="clearfix friend " onclick="showMessage(this)">
-                <img class="avatar" src="images/userhead.jpg" alt="avatar" />
+-->
+            <li id="requestFriend" class="clearfix friend " onclick="acceptAddFriend(this)">
+                <img class="avatar" src="images/addFriend.jpg" alt="avatar" />
                 <div class="about">
-                    <div class="name">Marry</div>
+                    <div class="name">好友请求</div>
                     <div class="status">
-                        <i class="fa fa-circle offline"></i>online
+                        <i class="fa fa-circle offline"></i>
                     </div>
                 </div>
             </li>
--->
+
             
         </ul>
         
@@ -76,7 +78,22 @@
 
         <div class="chat-history " id="messagesDiv">
             <ul id="messages">
-            	<!--
+
+             <!--
+                <li id="requestFriend_6" class="clearfix requestFriend ">
+                    <div class="message-data align-right">
+                        <span class="message-data-time">10:10 AM, Today</span>
+                        <span class="message-data-name">Olia</span>
+                    </div>
+                    <div class="message other-message float-right">
+                       该用户请求添加为好友，是否同意？
+                        </br>
+                        <button onclick="agreeAddFriend(6)">同意</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick="disagreeAddFriend(6)">拒绝</button>
+                    </div>
+                </li>
+
+            -->
+                <!--
                 	下面是聊天信息
                 -->
                

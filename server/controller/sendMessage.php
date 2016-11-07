@@ -17,7 +17,7 @@ $uid=$jsonArray['uid'];
 $tid=$jsonArray['tid'];
 $content=$jsonArray['content'];
 
-$sql='insert into unreadmessages(uid,tid,content,sendtime) values('.$uid.','.$tid.',"'.$content.'","'.date('Y-m-d H:i:s',time()).'");';
+$sql='insert into unreadmessages(uid,tid,content,`type`,sendtime) values('.$uid.','.$tid.',"'.$content.'","TEXT","'.date('Y-m-d H:i:s',time()).'");';
 
 
 $dbLink=connectMysqli();

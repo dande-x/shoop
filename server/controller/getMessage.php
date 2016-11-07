@@ -16,8 +16,9 @@ $jsonArray=json_decode($JSON,true);
 $uid=$jsonArray['uid'];
 $tid=$jsonArray['tid'];
 
+$sql='replace online set ';
 
-$sql='select * from unreadmessages where uid='.$tid.' and tid='.$uid.';';
+$sql='select * from unreadmessages where uid='.$tid.' and tid='.$uid.' and `type`="TEXT";';
 $dbLink=connectMysqli();
 $messages=array();
 $result=$dbLink->query($sql);
@@ -30,6 +31,6 @@ while($row=$result->fetch_assoc()){
 	$row['name']=$nRow['name'];
 	$messages[]=$row;
 }
-$sql='delete  from unreadmessages where uid='.$tid.' and tid='.$uid.';';
+$sql='delete  from unreadmessages where uid='.$tid.' and tid='.$uid.' and `type`="TEXT";';
 $result=$dbLink->query($sql);
 exit(json_encode($messages));

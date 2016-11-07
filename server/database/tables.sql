@@ -3,8 +3,8 @@ USE `shoop`;
 
 -- 创建一个专门管理的用户，赋予仅管理该数据库的权限
 
-GRANT ALL ON cuthanddb TO 'vmdbadmin'@'%' IDENTIFIED BY '';
-FLUSH PRIVILEGE;
+-- GRANT ALL ON cuthanddb TO 'vmdbadmin'@'%' IDENTIFIED BY '';
+-- FLUSH PRIVILEGE;
 
 DROP TABLE IF EXISTS `users`;
 DROP TABLE IF EXISTS `online`;
