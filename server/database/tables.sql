@@ -76,7 +76,8 @@ CREATE TABLE `friends`(
   `userId` INT UNSIGNED NOT NULL,
   `friendId` INT UNSIGNED NOT NULL,
   `ctime` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  INDEX (`userId`)
+  INDEX (`userId`),
+  UNIQUE(`userId`,`friendId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 -- 好友，双方互为好友时，是两条记录。
 
